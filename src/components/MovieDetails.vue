@@ -63,6 +63,7 @@ export default {
     },
     closeDetails () {
       this.$store.commit('setRowSelected', -1)
+      this.$store.commit('setMovieSelected', null)
     },
     playTrailer () {
       this.$store.commit('setIsTrailerPlaying', true)
