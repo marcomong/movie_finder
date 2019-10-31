@@ -1,0 +1,35 @@
+.header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 57rem;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+
+    &__logo {
+        text-align: center;
+        margin: 1rem 0;
+
+        &__image {
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+}
+
+.searchBar {
+    outline: none;
+    height: 4rem;
+    border-radius: 10rem;
+    font-size: $font-medium;
+    border: none;
+    padding: 0 1.5rem 0.1rem 1.5rem;
+    transform: translateY(-5rem);
+
+    @include respond(phone) {
+        height: 5rem;
+        font-size: $font-large;
+        border-radius: .5rem;
+        transform: translateY(-3rem);
+    }
+}

@@ -1,0 +1,17 @@
+.category {
+  color: $color-white;
+  width: auto;
+  display: inline-block;
+  border: .1rem solid $color-white;
+  border-radius: 100rem;
+  padding: .4rem 1rem;
+  font-size: $font-xsmall;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-right: 1rem;
+  font-family: $font-family-lato;
+
+  @include respond(phone) {
+    font-size: $font-small;
+  }
+}

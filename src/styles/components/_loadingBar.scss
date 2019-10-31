@@ -1,0 +1,57 @@
+.meter {
+  height: 1rem;
+  position: relative;
+  background: #03101b;
+  border-radius: 10rem;
+  padding: .1rem;
+  margin: .5rem 0rem;
+ }
+ 
+ .meter > span {
+   display: block;
+   height: 100%;
+   border-radius: 10rem;
+   position: relative;
+   overflow: hidden;
+ }
+ 
+ .green {
+   background-image: linear-gradient(
+   to right,
+   rgb(43,194,83) 37%,
+   rgb(84,240,84) 69%
+   );
+ }
+ 
+ .yellow {
+   background-image: linear-gradient(
+   to right,
+   rgb(122, 105, 26) 37%,
+   rgb(223, 220, 29) 69%
+   );
+ }
+ 
+ .red {
+   background-image: linear-gradient(
+   to right,
+   rgb(97, 14, 14) 37%,
+   rgb(223, 45, 29) 69%
+   );
+ }
+ 
+ .loading-bar-container {
+   width: 100%;
+ }
+ 
+ .percentage {
+   color: white;
+   text-align: right;
+   font-family: 'Lovelo', 'Lato', sans-serif;
+   margin: 0;
+   padding: 0;
+   font-size: $font-medium;
+
+   @include respond(phone) {
+     font-size: $font-large;
+   }
+ }
