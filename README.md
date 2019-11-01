@@ -42,3 +42,15 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## docker usefull commands
+remove all containers
+```
+docker rm $(docker ps -a -f status=exited -q)
+```
+
+remove all images
+
+```
+docker rmi $(docker images -a -q)
+```
