@@ -28,7 +28,6 @@ export default {
   methods: {
     ...mapActions(['retrieveMovies']),
     loadMovies: _.debounce(function () {
-      console.log('here')
       this.isCalculating = true
       setTimeout(function () {
         this.isCalculating = false

@@ -63,7 +63,7 @@ export default new Vuex.Store({
         state.page += 1
         MovieService.getPopularMovies(page, (err, res) => {
           if (err) {
-            console.log(err)
+            // console.log(err)
             // show error
           } else {
             commit('setMovies', res.data.results)
@@ -73,7 +73,7 @@ export default new Vuex.Store({
         state.isSearching = true
         MovieService.searchMovies(payload, (err, res) => {
           if (err) {
-            console.log(err)
+            // console.log(err)
           } else {
             commit('setMoviesSearched', res.data.results)
           }
@@ -83,7 +83,7 @@ export default new Vuex.Store({
     retrieveSelectedMovie ({ commit }, payload) {
       MovieService.getMovieDetails(payload, (err, result) => {
         if (err) {
-          console.log(err)
+          // console.log(err)
         } else {
           commit('setMovieSelected', result.data)
         }
@@ -92,7 +92,7 @@ export default new Vuex.Store({
     retrieveTrailer ({ commit }, payload) {
       MovieService.getTrailer(payload, (err, result) => {
         if (err || result.data.results.length === 0) {
-          console.log(err)
+          // console.log(err)
         } else {
           commit('setTrailerLink', `https://www.youtube.com/embed/${result.data.results[0].key}?autoplay=1&mute=1`)
         }
